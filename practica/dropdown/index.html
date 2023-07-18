@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <style>
+      .menu {
+        width: 100%;
+        background: blue;
+        display: flex;
+        gap: 10px;
+        position: sticky;
+        top: 0;
+      }
+
+      .menu li {
+        padding: 16px 8px;
+      }
+
+      .menu li:hover,
+      .menu li:focus {
+        background: #121286;
+      }
+
+      .menu a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu a:hover,
+      .menu:focus {
+        text-decoration: underline;
+      }
+
+      .sub-menu {
+        width: 200px;
+        display: none;
+      }
+
+      .menu li:hover .sub-menu,
+      .menu li:focus .sub-menu {
+        display: block;
+      }
+
+      .menu li {
+        position: relative;
+      }
+
+      .sub-menu {
+        background: #121286;
+        position: absolute;
+        top: 48px;
+        left: 0;
+      }
+
+      .really-long {
+        background: yellow;
+        height: 1000px;
+      }
+
+      .content {
+        padding: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">One</a></li>
+      <li>
+        <a href="#">Two</a>
+
+        <ul class="sub-menu">
+          <li><a href="#">Sub-1</a></li>
+          <li><a href="#">Sub-2</a></li>
+          <li><a href="#">Sub-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Three</a></li>
+    </ul>
+    <main>
+      <div class="really-long">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam recusandae ullam architecto
+        sed velit consectetur dolorem. Ullam illum tenetur eveniet. Molestiae, odio explicabo? Eius
+        cupiditate, quaerat tempora facilis esse nesciunt!
+      </div>
+    </main>
+  </body>
+</html>

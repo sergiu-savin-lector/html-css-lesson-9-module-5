@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 5 - Lectia 9</title>
+    <style>
+      .sticky {
+        background: white;
+        z-index: 1;
+        position: sticky;
+        top: 0;
+      }
+
+      .lengthy-article {
+        min-height: 1000px;
+        background: lightyellow;
+        padding: 16px;
+      }
+
+      .parent-element {
+        position: relative;
+      }
+
+      .main-element {
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        background-color: yellow;
+        padding: 10px;
+      }
+
+      .sibling-element {
+        padding: 10px;
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">Proprietatea position</h1>
+      <p>
+        Daca ai de realizat un design complex, va trebui sa modifici 'flow-ul' standard al
+        documentului si sa suprascrii stiluri standard din browser. De examplu, daca vrei sa pui
+        elemente suprapuse intr-o anumita ordine, sau daca vrei ca navigatia site-ului sa ramana in
+        sus-ul paginii, si sa nu se miste cand faci scroll in sus sau in jos. Ca sa faci asta, si
+        multe altele, te poti folosi de proprietatea CSS <em>position</em>. Ea poate lua cinci
+        valori:
+      </p>
+      <ul class="bullet-list mt-md">
+        <li>static</li>
+        <li>relative</li>
+        <li>absolute</li>
+        <li>fixed</li>
+        <li>sticky</li>
+      </ul>
+      <div class="mt-md">
+        <a href="https://www.freecodecamp.org/news/learn-the-basics-the-css-position-property/">
+          Articol despre pozitionarea elementelor
+        </a>
+      </div>
+      <section class="mt-lg">
+        <article class="lesson-example">
+          <div class="parent-element">
+            <div class="sibling-element">I'm the other sibling element</div>
+
+            <div class="main-element">All eyes on me. I am the main element.</div>
+
+            <div class="sibling-element">I'm the other sibling element</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-lg">
+        <article class="lengthy-article">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias, ad eos nihil
+          eveniet incidunt cum, fuga sed, repudiandae aperiam debitis dolore qui minus harum ea
+          aliquam provident illum et? Titlul paginii este <em>sticky</em>.
+          <em>Da scroll in jos.</em>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

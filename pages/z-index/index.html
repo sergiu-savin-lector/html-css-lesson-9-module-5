@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <title>HTML/CSS Modulul 5 - Lectia 9</title>
+    <style>
+      .container {
+        background: red;
+      }
+
+      p {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        z-index: -1;
+      }
+
+      p:hover {
+        z-index: 1;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin: 10px;
+        border: 1px solid black;
+      }
+
+      .second {
+        left: 50px;
+        position: relative;
+        top: 50px;
+        background-color: yellow;
+      }
+
+      .first-container {
+        border: 3px solid green;
+        padding: 20px;
+        position: relative;
+      }
+
+      .box-container {
+        border: 3px dashed white;
+      }
+
+      .third {
+        position: relative;
+        z-index: 2;
+      }
+      /* Intotdeauna va aplica top in detrimentul bottom-ului si left in detrimentul right-ului */
+      .first {
+        position: absolute;
+        top: 5px; 
+        bottom: 5px;
+        right: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <h1 class="heading-primary sticky">Proprietatea z-index</h1>
+      <section class="mt-md">
+        <h1>Titlul Paginii</h1>
+        <p>Because the image has a z-index of -1, it will be placed behind the heading.</p>
+      </section>
+      <div class="first-container">
+        <section class="box-container">
+          <div class="box first">1</div>
+          <div class="box second">2</div>
+          <div class="box third">3</div>
+          <div class="box fourth">4</div>
+        </section>
+      </div>
+
+      <input type="text" placeholder="Exemplu de test" class="test-input">
+      
+    </main>
+  </body>
+</html>
